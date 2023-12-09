@@ -8,5 +8,5 @@ const root = createRoot(document.getElementById('root'));
 
 // Rendering the App component into the root
 root.render(
-  <App />
+    <App />
 );
