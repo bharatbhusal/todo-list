@@ -1,8 +1,10 @@
+/* Apply styles to all elements, setting a default font and box-sizing */
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
+/* Styling for the body of the document */
 body {
   background: #333;
   color: hsl(200, 100%, 90%);
@@ -11,18 +13,21 @@ body {
   margin: 0 auto;
 }
 
+/* Styles for the form used to add new items */
 .new-item-form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Styles for a row within a form */
 .form-row {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
 }
 
+/* Styles for a generic button */
 .btn {
   background: hsl(200, 100%, 50%, 0.1);
   border: 1px solid hsl(200, 100%, 50%);
@@ -33,22 +38,26 @@ body {
   outline: none;
 }
 
+/* Hover and focus styles for the button */
 .btn:hover,
 .btn:focus-visible {
   background: hsl(200, 100%, 50%, 0.2);
 }
 
+/* Styles for a danger-themed button */
 .btn.btn-danger {
   background: hsl(0, 100%, 40%, 0.1);
   border: 1px solid hsl(0, 100%, 40%);
   color: hsl(0, 100%, 40%);
 }
 
+/* Hover and focus styles for the danger-themed button */
 .btn.btn-danger:hover,
 .btn.btn-danger:focus-visible {
   background: hsl(0, 100%, 40%, 0.2);
 }
 
+/* Styles for input elements within the new item form */
 .new-item-form input {
   outline: none;
   border: 1px solid hsl(200, 100%, 40%);
@@ -58,16 +67,19 @@ body {
   color: hsl(200, 100%, 90%);
 }
 
+/* Focus styles for the input element */
 .new-item-form input:focus {
   border: 1px solid hsl(200, 100%, 70%);
 }
 
+/* Styles for a header element */
 .header {
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
+/* Styles for an unordered list */
 .list {
   margin: 0;
   padding: 0;
@@ -75,22 +87,26 @@ body {
   list-style: none;
 }
 
+/* Styling for list items with checked input */
 .list li:has(input:checked) label {
   color: hsl(200, 20%, 40%);
 }
 
+/* Styles for the overall structure of the list */
 .list {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
+/* Styles for individual list items */
 .list li {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
+/* Styles for labels within list items */
 .list li label {
   display: flex;
   gap: 0.25rem;
@@ -98,10 +114,12 @@ body {
   align-items: center;
 }
 
+/* Focus styles for labels within list items */
 .list li:has(input:focus-visible) label {
   outline: 1px solid hsl(200, 100%, 50%);
 }
 
+/* Styles for the hidden input within list items */
 .list li input {
   outline: none;
   width: 0;
@@ -111,6 +129,7 @@ body {
   position: absolute;
 }
 
+/* Styles for the checkbox visual representation before the label */
 .list li label::before {
   content: "";
   display: block;
@@ -123,10 +142,12 @@ body {
   align-items: center;
 }
 
+/* Hover styles for the checkbox visual representation before the label */
 .list li label:hover::before {
   background: hsl(200, 100%, 80%);
 }
 
+/* Checked state styles for the checkbox visual representation before the label */
 .list li:has(input:checked) label::before {
   content: "✔";
   background: hsl(200, 100%, 40%);
@@ -135,6 +156,7 @@ body {
   font-weight: bold;
 }
 
+/* Checked state hover styles for the checkbox visual representation before the label */
 .list li:has(input:checked) label:hover::before {
   background: hsl(200, 100%, 30%);
 }
