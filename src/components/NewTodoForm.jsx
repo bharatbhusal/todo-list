@@ -31,7 +31,7 @@ export function NewTodoForm({ addTodo }) {
             </div>
 
             {/* Button to submit the form and add the new todo item */}
-            <button className="btn">Add</button>
+            <button className="add-btn">Add</button>
         </form>
     );
 }

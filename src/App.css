@@ -21,16 +21,20 @@ body {
 .new-item-form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 /* Styles for a row within a form */
 .form-row {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.4rem;
 }
 
+.add_btn{
+  padding:.5rem 0;
+  font-size: 2rem;
+}
 /* Styles for a generic button */
 .btn {
   background: hsl(200, 100%, 50%, 0.1);
@@ -40,6 +44,17 @@ body {
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
+}
+
+.add-btn{
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid rgb(0, 170, 255);
+  color: rgb(0, 170, 255);
+  padding: 0.4em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
 }
 
 /* Hover and focus styles for the button */
@@ -69,6 +84,8 @@ body {
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
   color: hsl(200, 100%, 90%);
+  height: 3.3rem;
+  font-size: 1.8rem;
 }
 
 /* Focus styles for the input element */
@@ -82,7 +99,6 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
-
 
 
 /* Styles for the overall structure of the list */
