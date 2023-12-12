@@ -17,6 +17,7 @@ export default function TodoList({ todos, setTodos }) {
                 {todos.map(todo => {
                     return <TodoItem {...todo} key={todo.id} setTodos={setTodos} />;
                 })}
+                {todos.length!==0 && <h4>Total Todos: {todos.length}</h4>}
             </ul>
         </>
     );

@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 /* Styling for the body of the document */
 body {
   background: #333;
-  color: hsl(200, 100%, 90%);
+  color: rgb(204, 238, 255);
   max-width: 400px;
   padding: 1rem;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 /* Styles for the form used to add new items */
@@ -30,8 +34,8 @@ body {
 /* Styles for a generic button */
 .btn {
   background: hsl(200, 100%, 50%, 0.1);
-  border: 1px solid hsl(200, 100%, 50%);
-  color: hsl(200, 100%, 50%);
+  border: 1px solid rgb(0, 170, 255);
+  color: rgb(0, 170, 255);
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
   cursor: pointer;
@@ -79,31 +83,29 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Styles for an unordered list */
-.list {
-  margin: 0;
-  padding: 0;
-  margin-left: 1rem;
-  list-style: none;
-}
 
-/* Styling for list items with checked input */
-.list li:has(input:checked) label {
-  color: hsl(200, 20%, 40%);
-}
 
 /* Styles for the overall structure of the list */
 .list {
+  /* margin: 0; */
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.5rem;
+  overflow-y: scroll;
+  scroll-behavior:smooth;
+  
+  height: 25rem;
 }
 
 /* Styles for individual list items */
 .list li {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
+  justify-content: space-between;
+  background-color:#545151;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
 }
 
 /* Styles for labels within list items */
@@ -112,6 +114,12 @@ body {
   gap: 0.25rem;
   cursor: pointer;
   align-items: center;
+}
+
+
+/* Styling for list items with checked input */
+.list li:has(input:checked) label {
+  color: hsl(200, 20%, 40%);
 }
 
 /* Focus styles for labels within list items */
