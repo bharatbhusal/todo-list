@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
+import DeleteTodoItem from "./DeleteTodoItem";
 
 // Functional component for rendering a list of todo items
-export default function TodoList({ todos, setTodos, categories }) {
+export default function TodoList({ todos, setTodos, categories, setCategories }) {
     const [toList, setToList] = useState('')
     const [count, setCount] = useState(0)
 
     const Category = ({ each }) => {
         return (
-            <button className={`btn btn-category ${toList === each ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each}</button>
+            <button className={`btn btn-category ${toList.category === each.category ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each !== "All" ? each.category : "All"}</button>
         )
     }
 
@@ -18,12 +19,13 @@ export default function TodoList({ todos, setTodos, categories }) {
             if (category === "All") setCount(todos.length)
             else
                 todos.map((todo) => {
-                    if (todo.category === category)
+                    if (todo.category === category.category)
                         setCount((prev) => prev + 1)
                 })
         }
         countTodos(toList)
     }, [toList, todos])
+
 
     return (
         <>
@@ -32,7 +34,7 @@ export default function TodoList({ todos, setTodos, categories }) {
             <div className="category-selector">
                 <Category each={"All"} />
                 {categories.map(each => (
-                    <Category key={each.id} each={each.category} />
+                    <Category key={each.id} each={each} />
                 ))}
             </div>
 
@@ -44,12 +46,15 @@ export default function TodoList({ todos, setTodos, categories }) {
                 {/* Map through the todos array and render TodoItem components */}
                 {toList && todos.map(todo => {
                     if (toList === "All") return <TodoItem {...todo} key={todo.id} setTodos={setTodos} />;
-                    else if (todo.category === toList)
+                    else if (todo.category === toList.category)
                         return <TodoItem {...todo} key={todo.id} setTodos={setTodos} />;
                 })}
             </ul>
             {/* Display the total number of todos if there are todos */}
-            {<h4>{toList} Todos: {toList !== "" ? count : todos.length}</h4>}
+            {<h4>{toList.category} Todos: {!toList.category ? todos.length : count}</h4>}
+
+            {categories.length !== 0 && toList.category && <DeleteTodoItem  {...toList} key={toList.id} setCategories={setCategories} />}
+
         </>
     );
 }

@@ -7,6 +7,7 @@ import { NewTodoForm } from './components/NewTodoForm';
 import TodoList from './components/TodoList';
 import { NewCategoryForm } from './components/NewCategoryForm';
 
+
 // Main App component
 function App() {
   // State to manage the list of todos
@@ -62,7 +63,7 @@ function App() {
       <NewTodoForm addTodo={addTodo} categories={categories} />
 
       {/* Component for displaying the list of todos */}
-      <TodoList todos={todos} setTodos={setTodos} categories={categories} />
+      <TodoList todos={todos} setTodos={setTodos} categories={categories} setCategories={setCategories} />
       <NewCategoryForm addCategory={addCategory} />
     </>
   )

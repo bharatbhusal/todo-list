@@ -1,5 +1,6 @@
 /* Styles for the form used to add new items */
-.new-item-form {
+.new-item-form
+/* .new-category-form  */ {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -12,8 +13,19 @@
   gap: 0.4rem;
 }
 
+.new-category-form .form-row > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.new-category-form input {
+  width: 80%;
+}
+
 /* Styles for input elements within the new item form */
-.new-item-form input {
+.new-item-form input,
+.new-category-form input {
   outline: none;
   border: 1px solid hsl(200, 100%, 40%);
   background: hsl(200, 100%, 30%);
@@ -131,4 +143,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn-delete-category {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1.5rem;
 }
