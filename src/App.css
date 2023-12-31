@@ -119,6 +119,35 @@ body {
 .list li:hover {
   background-color: rgb(124, 115, 115);
 }
+
 .list li.completed {
-  background-color: aqua;
+  color: hsl(200, 100%, 40%);
+}
+
+/* Styles for the checkbox visual representation before the label */
+.title {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+/* Checked state styles for the checkbox visual representation before the label */
+.title.completed::before {
+  content: "✔";
+  background: hsl(200, 100%, 40%);
+  color: hsl(200, 100%, 90%);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.title::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: hsl(200, 100%, 90%);
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

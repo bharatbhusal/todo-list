@@ -25,8 +25,7 @@ export default function TodoItem({ completed, id, title, category, setTodos, toL
     return (
 
         <li className={completed === true ? "completed" : ""} onClick={() => toggleTodo(id)}>
-            <label>{title}</label>
-
+            <div className={`title ${completed === true ? "completed" : ""}`}>{title}</div>
             {/* Button to delete the todo */}
             <button className="btn btn-danger" onClick={() => deleteTodo(id)}>
                 Delete
