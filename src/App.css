@@ -31,6 +31,17 @@ body {
   gap: 0.4rem;
 }
 
+/* Styles for input elements within the new item form */
+.new-item-form input {
+  outline: none;
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+  height: 2.6rem;
+  font-size: 1.2rem;
+}
 /* Styles for a generic button */
 .btn {
   background: rgba(0, 170, 255, 0.1);
@@ -42,7 +53,7 @@ body {
   outline: none;
 }
 .add-btn {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .category-selector {
@@ -74,18 +85,6 @@ body {
   font-size: medium;
 }
 
-/* Styles for input elements within the new item form */
-.new-item-form input {
-  outline: none;
-  border: 1px solid hsl(200, 100%, 40%);
-  background: hsl(200, 100%, 30%);
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  color: hsl(200, 100%, 90%);
-  height: 3.3rem;
-  font-size: 1.8rem;
-}
-
 /* Styles for a header element */
 .header {
   font-size: 1.5rem;
@@ -102,7 +101,7 @@ body {
   gap: 0.5rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  height: 25rem;
+  height: 23rem;
 }
 
 /* Styles for individual list items */
