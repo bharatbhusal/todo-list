@@ -6,6 +6,10 @@ export function NewTodoForm({ addTodo }) {
     const [newItemTitle, setNewItemTitle] = useState('');
     const [itemCategory, setItemCategory] = useState('');
 
+    const Category = ({ name }) => {
+        return (
+            <button className={`btn btn-category ${itemCategory === name ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory(name)}>{name}</button>)
+    }
     // Function to handle form submission
     function handleSubmit(e) {
         e.preventDefault();
@@ -33,10 +37,9 @@ export function NewTodoForm({ addTodo }) {
                 />
                 <label htmlFor="category">Category</label>
                 <div className="category-selector">
-
-                    <button className={`btn btn-category ${itemCategory === "College" ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory("College")}>College</button>
-                    <button className={`btn btn-category ${itemCategory === "Personal" ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory("Personal")}>Personal</button>
-                    <button className={`btn btn-category ${itemCategory === "Secrect" ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory("Secrect")}>Secrect</button>
+                    <Category name="Personal" />
+                    <Category name="College" />
+                    <Category name="Secrect" />
                 </div>
             </div>
 

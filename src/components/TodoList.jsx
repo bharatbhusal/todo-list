@@ -6,6 +6,12 @@ export default function TodoList({ todos, setTodos }) {
     const [toList, setToList] = useState('')
     const [count, setCount] = useState(0)
 
+    const Category = ({ name }) => {
+        return (
+            <button className={`btn btn-category ${toList === name ? "active" : "btn-category"}`} onClick={() => setToList(name)}>{name}</button>
+        )
+    }
+
     useEffect(() => {
         const countTodos = (category) => {
             setCount(0)
@@ -24,10 +30,10 @@ export default function TodoList({ todos, setTodos }) {
             {/* Header for the todo list */}
             <h1 className="header">Todo List</h1>
             <div className="category-selector">
-                <button className={`btn btn-category ${toList === "All" ? "active" : "btn-category"}`} onClick={() => setToList("All")}>All</button>
-                <button className={`btn btn-category ${toList === "College" ? "active" : "btn-category"}`} onClick={() => setToList("College")}>College</button>
-                <button className={`btn btn-category ${toList === "Personal" ? "active" : "btn-category"}`} onClick={() => setToList("Personal")}>Personal</button>
-                <button className={`btn btn-category ${toList === "Secrect" ? "active" : "btn-category"}`} onClick={() => setToList("Secrect")}>Secrect</button>
+                <Category name="All" />
+                <Category name="Personal" />
+                <Category name="College" />
+                <Category name="Secrect" />
             </div>
 
             {/* List of todo items */}

@@ -1,6 +1,6 @@
 # Todo App
 
-Welcome to the React Todo Application project! This project is a simple React application configured with JavaScript to manage a todo list.
+Welcome to the React Todo Application project! This project is a simple React application configured with JavaScript to manage a todo list. The app has categories to filter the types of todos.
 
 ## Project Structure
 
