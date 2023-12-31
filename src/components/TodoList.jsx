@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 
 // Functional component for rendering a list of todo items
-export default function TodoList({ todos, setTodos }) {
+export default function TodoList({ todos, setTodos, categories }) {
     const [toList, setToList] = useState('')
     const [count, setCount] = useState(0)
 
-    const Category = ({ name }) => {
+    const Category = ({ each }) => {
         return (
-            <button className={`btn btn-category ${toList === name ? "active" : "btn-category"}`} onClick={() => setToList(name)}>{name}</button>
+            <button className={`btn btn-category ${toList === each ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each}</button>
         )
     }
 
@@ -30,10 +30,10 @@ export default function TodoList({ todos, setTodos }) {
             {/* Header for the todo list */}
             <h1 className="header">Todo List</h1>
             <div className="category-selector">
-                <Category name="All" />
-                <Category name="Personal" />
-                <Category name="College" />
-                <Category name="Secrect" />
+                <Category each={"All"} />
+                {categories.map(each => (
+                    <Category key={each.id} each={each.category} />
+                ))}
             </div>
 
             {/* List of todo items */}

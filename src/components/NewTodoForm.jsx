@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
 // Functional component for rendering a form to add new todo items
-export function NewTodoForm({ addTodo }) {
+export function NewTodoForm({ addTodo, categories }) {
     // State to track the value of the new todo item
     const [newItemTitle, setNewItemTitle] = useState('');
     const [itemCategory, setItemCategory] = useState('');
 
-    const Category = ({ name }) => {
+    const Category = ({ each }) => {
         return (
-            <button className={`btn btn-category ${itemCategory === name ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory(name)}>{name}</button>)
+            <button className={`btn btn-category ${itemCategory === each ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory(each)}>{each}</button>)
     }
     // Function to handle form submission
     function handleSubmit(e) {
@@ -37,9 +37,9 @@ export function NewTodoForm({ addTodo }) {
                 />
                 <label htmlFor="category">Category</label>
                 <div className="category-selector">
-                    <Category name="Personal" />
-                    <Category name="College" />
-                    <Category name="Secrect" />
+                    {categories.map(each => (
+                        <Category key={each.id} each={each.category} />
+                    ))}
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 // Functional component for rendering an individual todo item
-export default function TodoItem({ completed, id, title, category, setTodos, toList }) {
+export default function TodoItem({ completed, id, title, setTodos }) {
     // Function to toggle the completion status of a todo
     function toggleTodo(id) {
         console.log("toggle called");
