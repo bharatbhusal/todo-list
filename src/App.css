@@ -31,13 +31,13 @@ body {
   gap: 0.4rem;
 }
 
-.add_btn{
-  padding:.5rem 0;
+.add_btn {
+  padding: 0.5rem 0;
   font-size: 2rem;
 }
 /* Styles for a generic button */
 .btn {
-  background: hsl(200, 100%, 50%, 0.1);
+  background: rgba(0, 170, 255, 0.1);
   border: 1px solid rgb(0, 170, 255);
   color: rgb(0, 170, 255);
   padding: 0.25em 0.5em;
@@ -46,7 +46,7 @@ body {
   outline: none;
 }
 
-.add-btn{
+.add-btn {
   background: hsl(200, 100%, 50%, 0.1);
   border: 1px solid rgb(0, 170, 255);
   color: rgb(0, 170, 255);
@@ -57,10 +57,26 @@ body {
   font-size: 1.5rem;
 }
 
+.category-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+.btn-category {
+  padding: 0.4rem;
+  width: 7rem;
+  font-size: medium;
+  /* background-color: #00ff8433; */
+  color: rgb(204, 238, 255);
+}
+
+.btn-category.active {
+  background-color: hsl(200, 100%, 30%);
+}
 /* Hover and focus styles for the button */
 .btn:hover,
 .btn:focus-visible {
-  background: hsl(200, 100%, 50%, 0.2);
+  background: #00aaff33;
 }
 
 /* Styles for a danger-themed button */
@@ -100,7 +116,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-
 /* Styles for the overall structure of the list */
 .list {
   /* margin: 0; */
@@ -109,8 +124,8 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   overflow-y: scroll;
-  scroll-behavior:smooth;
-  
+  scroll-behavior: smooth;
+
   height: 25rem;
 }
 
@@ -119,7 +134,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:#545151;
+  background-color: #545151;
   border-radius: 0.5rem;
   padding: 0.4rem;
 }
@@ -131,7 +146,6 @@ body {
   cursor: pointer;
   align-items: center;
 }
-
 
 /* Styling for list items with checked input */
 .list li:has(input:checked) label {

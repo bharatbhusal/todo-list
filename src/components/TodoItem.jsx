@@ -1,6 +1,5 @@
 // Functional component for rendering an individual todo item
-export default function TodoItem({ completed, id, title, setTodos }) {
-
+export default function TodoItem({ completed, id, title, category, setTodos, toList }) {
     // Function to toggle the completion status of a todo
     function toggleTodo(id, completed) {
         console.log("toggle called");
@@ -22,7 +21,9 @@ export default function TodoItem({ completed, id, title, setTodos }) {
 
     // Rendering the todo item
     return (
+
         <li>
+
             <label>
                 {/* Checkbox for marking the todo as completed */}
                 <input type="checkbox" checked={completed} onChange={(e) => toggleTodo(id, e.target.checked)} />
@@ -34,6 +35,9 @@ export default function TodoItem({ completed, id, title, setTodos }) {
             <button className="btn btn-danger" onClick={() => deleteTodo(id)}>
                 Delete
             </button>
+
         </li>
+
+
     );
 }

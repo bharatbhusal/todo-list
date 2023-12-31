@@ -23,10 +23,10 @@ function App() {
   }, [todos])
 
   // Function to add a new todo to the list
-  function addTodo(title) {
+  function addTodo(title, category) {
     setTodos((currentTodos) => {
       return [
-        ...currentTodos, { id: crypto.randomUUID(), title, completed: false }
+        ...currentTodos, { id: crypto.randomUUID(), title, category, completed: false }
       ]
     })
   }
