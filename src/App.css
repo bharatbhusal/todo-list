@@ -31,10 +31,6 @@ body {
   gap: 0.4rem;
 }
 
-.add_btn {
-  padding: 0.5rem 0;
-  font-size: 2rem;
-}
 /* Styles for a generic button */
 .btn {
   background: rgba(0, 170, 255, 0.1);
@@ -45,38 +41,29 @@ body {
   cursor: pointer;
   outline: none;
 }
-
 .add-btn {
-  background: hsl(200, 100%, 50%, 0.1);
-  border: 1px solid rgb(0, 170, 255);
-  color: rgb(0, 170, 255);
-  padding: 0.4em;
-  border-radius: 0.25em;
-  cursor: pointer;
-  outline: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .category-selector {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.6rem;
+  gap: 2rem;
+  overflow-x: scroll;
 }
+
 .btn-category {
   padding: 0.4rem;
-  width: 7rem;
+  width: min-content;
+  min-width: 6rem;
   font-size: medium;
-  /* background-color: #00ff8433; */
   color: rgb(204, 238, 255);
 }
 
-.btn-category.active {
+.btn-category.active,
+.btn:hover {
   background-color: hsl(200, 100%, 30%);
-}
-/* Hover and focus styles for the button */
-.btn:hover,
-.btn:focus-visible {
-  background: #00aaff33;
 }
 
 /* Styles for a danger-themed button */
@@ -84,12 +71,7 @@ body {
   background: hsl(0, 100%, 40%, 0.1);
   border: 1px solid hsl(0, 100%, 40%);
   color: hsl(0, 100%, 40%);
-}
-
-/* Hover and focus styles for the danger-themed button */
-.btn.btn-danger:hover,
-.btn.btn-danger:focus-visible {
-  background: hsl(0, 100%, 40%, 0.2);
+  font-size: medium;
 }
 
 /* Styles for input elements within the new item form */
@@ -102,11 +84,6 @@ body {
   color: hsl(200, 100%, 90%);
   height: 3.3rem;
   font-size: 1.8rem;
-}
-
-/* Focus styles for the input element */
-.new-item-form input:focus {
-  border: 1px solid hsl(200, 100%, 70%);
 }
 
 /* Styles for a header element */
@@ -125,7 +102,6 @@ body {
   gap: 0.5rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
-
   height: 25rem;
 }
 
@@ -137,64 +113,13 @@ body {
   background-color: #545151;
   border-radius: 0.5rem;
   padding: 0.4rem;
-}
-
-/* Styles for labels within list items */
-.list li label {
-  display: flex;
-  gap: 0.25rem;
+  padding-left: 1rem;
   cursor: pointer;
-  align-items: center;
 }
 
-/* Styling for list items with checked input */
-.list li:has(input:checked) label {
-  color: hsl(200, 20%, 40%);
+.list li:hover {
+  background-color: rgb(124, 115, 115);
 }
-
-/* Focus styles for labels within list items */
-.list li:has(input:focus-visible) label {
-  outline: 1px solid hsl(200, 100%, 50%);
-}
-
-/* Styles for the hidden input within list items */
-.list li input {
-  outline: none;
-  width: 0;
-  height: 0;
-  appearance: none;
-  pointer-events: none;
-  position: absolute;
-}
-
-/* Styles for the checkbox visual representation before the label */
-.list li label::before {
-  content: "";
-  display: block;
-  width: 0.9rem;
-  height: 0.9rem;
-  background: hsl(200, 100%, 90%);
-  border-radius: 0.25em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Hover styles for the checkbox visual representation before the label */
-.list li label:hover::before {
-  background: hsl(200, 100%, 80%);
-}
-
-/* Checked state styles for the checkbox visual representation before the label */
-.list li:has(input:checked) label::before {
-  content: "✔";
-  background: hsl(200, 100%, 40%);
-  color: hsl(200, 100%, 90%);
-  font-size: 0.75rem;
-  font-weight: bold;
-}
-
-/* Checked state hover styles for the checkbox visual representation before the label */
-.list li:has(input:checked) label:hover::before {
-  background: hsl(200, 100%, 30%);
+.list li.completed {
+  background-color: aqua;
 }

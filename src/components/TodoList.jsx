@@ -9,10 +9,12 @@ export default function TodoList({ todos, setTodos }) {
     useEffect(() => {
         const countTodos = (category) => {
             setCount(0)
-            todos.map((todo) => {
-                if (todo.category === category)
-                    setCount((prev) => prev + 1)
-            })
+            if (category === "All") setCount(todos.length)
+            else
+                todos.map((todo) => {
+                    if (todo.category === category)
+                        setCount((prev) => prev + 1)
+                })
         }
         countTodos(toList)
     }, [toList, todos])
@@ -22,6 +24,7 @@ export default function TodoList({ todos, setTodos }) {
             {/* Header for the todo list */}
             <h1 className="header">Todo List</h1>
             <div className="category-selector">
+                <button className={`btn btn-category ${toList === "All" ? "active" : "btn-category"}`} onClick={() => setToList("All")}>All</button>
                 <button className={`btn btn-category ${toList === "College" ? "active" : "btn-category"}`} onClick={() => setToList("College")}>College</button>
                 <button className={`btn btn-category ${toList === "Personal" ? "active" : "btn-category"}`} onClick={() => setToList("Personal")}>Personal</button>
                 <button className={`btn btn-category ${toList === "Secrect" ? "active" : "btn-category"}`} onClick={() => setToList("Secrect")}>Secrect</button>
@@ -34,7 +37,8 @@ export default function TodoList({ todos, setTodos }) {
 
                 {/* Map through the todos array and render TodoItem components */}
                 {toList && todos.map(todo => {
-                    if (todo.category === toList)
+                    if (toList === "All") return <TodoItem {...todo} key={todo.id} setTodos={setTodos} />;
+                    else if (todo.category === toList)
                         return <TodoItem {...todo} key={todo.id} setTodos={setTodos} />;
                 })}
             </ul>
