@@ -1,11 +1,10 @@
 .container {
-  height: 80vh;
+  margin-top: 3rem;
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* overflow: hidden; */
-  /* overflow-y: scroll; */
+  justify-content: space-around;
+  overflow-y: scroll;
 }
 
 .btn {
@@ -19,42 +18,12 @@
   outline: none;
 }
 
-input {
-  max-width: 380px;
-  border: 1px solid hsl(200, 100%, 40%);
-  background: hsl(200, 100%, 30%);
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  color: hsl(200, 100%, 90%);
-  height: 1.5rem;
-  font-size: 1.2rem;
+.btn-danger {
+  background: hsl(0, 100%, 40%, 0.1);
+  border: 1px solid hsl(0, 100%, 40%);
+  color: hsl(0, 100%, 40%);
+  font-size: medium;
 }
-
-.new-item-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.category-selector {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.6rem;
-  gap: 2rem;
-  overflow-x: scroll;
-}
-
-.list {
-  height: 15rem;
-  overflow-y: scroll;
-}
-/* 
-
-.add-btn {
-  font-size: 1.3rem;
-}
-
-
 
 .btn-category {
   padding: 0.4rem;
@@ -69,17 +38,41 @@ input {
   background-color: hsl(200, 100%, 30%);
 }
 
-.btn.btn-danger {
-  background: hsl(0, 100%, 40%, 0.1);
-  border: 1px solid hsl(0, 100%, 40%);
-  color: hsl(0, 100%, 40%);
-  font-size: medium;
+.btn-danger:hover {
+  background-color: hsl(0, 100%, 40%, 0.2);
 }
 
-.header {
-  font-size: 1.5rem;
+.btn-delete-category {
+  width: 100%;
+}
+.btn-add {
+  height: 3rem;
+  font-size: larger;
+}
+input {
+  max-width: 380px;
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+  height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.new-item-form {
   margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.category-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  gap: 2rem;
+  overflow-x: scroll;
 }
 
 .list {
@@ -89,10 +82,10 @@ input {
   gap: 0.5rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  height: 23rem;
+  height: 20rem;
 }
 
-.list li {
+li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,11 +96,11 @@ input {
   cursor: pointer;
 }
 
-.list li:hover {
+li:hover {
   background-color: rgb(124, 115, 115);
 }
 
-.list li.completed {
+li.completed {
   color: hsl(200, 100%, 40%);
 }
 
@@ -137,8 +130,22 @@ input {
   align-items: center;
 }
 
-.btn-delete-category {
+.new-category-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.new-category-form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.new-category-form > div input {
   width: 100%;
   height: 2rem;
-  margin-bottom: 1.5rem;
-} */
+}

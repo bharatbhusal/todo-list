@@ -44,7 +44,7 @@ export function NewTodoForm({ addTodo, categories }) {
 
 
             {/* Button to submit the form and add the new todo item */}
-            <button className="btn add-btn">Add</button>
+            <button className="btn btn-add">Add</button>
         </form>
     );
 }

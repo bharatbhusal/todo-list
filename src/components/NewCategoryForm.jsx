@@ -21,19 +21,16 @@ export function NewCategoryForm({ addCategory }) {
     return (
         <form className="new-category-form" onSubmit={handleSubmit}>
             {/* Form row with a label and input for the new todo category */}
-            <div className="form-row">
-                <label htmlFor="category">New Category</label>
-                <div>
-                    <input
-                        value={newCategory}
-                        type="text"
-                        id='category'
-                        onChange={(e) => setNewCategory(e.target.value)}
-                    />
-                    <button className="btn add-btn">Add</button>
-                </div>
+            <label htmlFor="category">New Category</label>
+            <div>
+                <input
+                    value={newCategory}
+                    type="text"
+                    id='category'
+                    onChange={(e) => setNewCategory(e.target.value)}
+                />
+                <button className="btn btn-add">Add</button>
             </div>
-
         </form>
     );
 }
