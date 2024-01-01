@@ -1,42 +1,15 @@
-/* Styles for the form used to add new items */
-.new-item-form
-/* .new-category-form  */ {
+.container {
+  height: 80vh;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-}
-
-/* Styles for a row within a form */
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.new-category-form .form-row > div {
-  display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
 }
 
-.new-category-form input {
-  width: 80%;
-}
-
-/* Styles for input elements within the new item form */
-.new-item-form input,
-.new-category-form input {
-  outline: none;
-  border: 1px solid hsl(200, 100%, 40%);
-  background: hsl(200, 100%, 30%);
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  color: hsl(200, 100%, 90%);
-  height: 2.6rem;
-  font-size: 1.2rem;
-}
-/* Styles for a generic button */
 .btn {
+  height: 2rem;
   background: rgba(0, 170, 255, 0.1);
   border: 1px solid rgb(0, 170, 255);
   color: rgb(0, 170, 255);
@@ -45,8 +18,22 @@
   cursor: pointer;
   outline: none;
 }
-.add-btn {
-  font-size: 1.3rem;
+
+input {
+  max-width: 380px;
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+  height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .category-selector {
@@ -56,6 +43,18 @@
   gap: 2rem;
   overflow-x: scroll;
 }
+
+.list {
+  height: 15rem;
+  overflow-y: scroll;
+}
+/* 
+
+.add-btn {
+  font-size: 1.3rem;
+}
+
+
 
 .btn-category {
   padding: 0.4rem;
@@ -70,7 +69,6 @@
   background-color: hsl(200, 100%, 30%);
 }
 
-/* Styles for a danger-themed button */
 .btn.btn-danger {
   background: hsl(0, 100%, 40%, 0.1);
   border: 1px solid hsl(0, 100%, 40%);
@@ -78,16 +76,13 @@
   font-size: medium;
 }
 
-/* Styles for a header element */
 .header {
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* Styles for the overall structure of the list */
 .list {
-  /* margin: 0; */
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -97,7 +92,6 @@
   height: 23rem;
 }
 
-/* Styles for individual list items */
 .list li {
   display: flex;
   align-items: center;
@@ -117,14 +111,12 @@
   color: hsl(200, 100%, 40%);
 }
 
-/* Styles for the checkbox visual representation before the label */
 .title {
   display: flex;
   gap: 0.4rem;
   align-items: center;
 }
 
-/* Checked state styles for the checkbox visual representation before the label */
 .title.completed::before {
   content: "✔";
   background: hsl(200, 100%, 40%);
@@ -149,4 +141,4 @@
   width: 100%;
   height: 2rem;
   margin-bottom: 1.5rem;
-}
+} */

@@ -58,14 +58,14 @@ function App() {
 
   // Render the NewTodoForm and TodoList components
   return (
-    <>
+    <div className='container'>
       {/* Component for adding new todos */}
       <NewTodoForm addTodo={addTodo} categories={categories} />
 
       {/* Component for displaying the list of todos */}
       <TodoList todos={todos} setTodos={setTodos} categories={categories} setCategories={setCategories} />
       <NewCategoryForm addCategory={addCategory} />
-    </>
+    </div >
   )
 }
 

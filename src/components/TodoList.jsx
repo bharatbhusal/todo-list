@@ -28,7 +28,7 @@ export default function TodoList({ todos, setTodos, categories, setCategories })
 
 
     return (
-        <>
+        <div className="todo-list">
             {/* Header for the todo list */}
             <h1 className="header">Todo List</h1>
             <div className="category-selector">
@@ -55,6 +55,6 @@ export default function TodoList({ todos, setTodos, categories, setCategories })
 
             {categories.length !== 0 && toList.category && <DeleteTodoItem  {...toList} key={toList.id} setCategories={setCategories} />}
 
-        </>
+        </div >
     );
 }

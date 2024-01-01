@@ -27,21 +27,21 @@ export function NewTodoForm({ addTodo, categories }) {
     return (
         <form className="new-item-form" onSubmit={handleSubmit}>
             {/* Form row with a label and input for the new todo item */}
-            <div className="form-row">
-                <label htmlFor="item">New Item</label>
-                <input
-                    value={newItemTitle}
-                    type="text"
-                    id='item'
-                    onChange={(e) => setNewItemTitle(e.target.value)}
-                />
-                <label htmlFor="category">Category</label>
-                <div className="category-selector">
-                    {categories.map(each => (
-                        <Category key={each.id} each={each.category} />
-                    ))}
-                </div>
+
+            <label htmlFor="item">New Item</label>
+            <input
+                value={newItemTitle}
+                type="text"
+                id='item'
+                onChange={(e) => setNewItemTitle(e.target.value)}
+            />
+            <label htmlFor="category">Category</label>
+            <div className="category-selector">
+                {categories.map(each => (
+                    <Category key={each.id} each={each.category} />
+                ))}
             </div>
+
 
             {/* Button to submit the form and add the new todo item */}
             <button className="btn add-btn">Add</button>
