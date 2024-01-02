@@ -1,6 +1,6 @@
 .container {
-  margin-top: 3rem;
-  width: 400px;
+  margin-top: 1rem;
+  width: 380px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
