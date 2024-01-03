@@ -16,6 +16,7 @@
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
+  overflow: hidden;
 }
 
 .btn-danger {
@@ -74,6 +75,7 @@ input {
   gap: 2rem;
   overflow-x: scroll;
   overflow-y: hidden;
+  /* overflow: hidden; */
 }
 
 .list {
