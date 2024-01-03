@@ -3,8 +3,10 @@ body {
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   background: #333;
   color: rgb(204, 238, 255);
-  width: 400px;
-  margin: 3rem auto;
+  /* width: 400px; */
+  /* margin: 3rem auto; */
+  display: flex;
+  justify-content: space-around;
 }
 
 ::-webkit-scrollbar {

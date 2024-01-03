@@ -1,6 +1,6 @@
 .container {
-  margin-top: 1rem;
-  width: 380px;
+  margin: 0.5rem;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -50,7 +50,7 @@
   font-size: larger;
 }
 input {
-  max-width: 380px;
+  /* max-width: 380px; */
   border: 1px solid hsl(200, 100%, 40%);
   background: hsl(200, 100%, 30%);
   border-radius: 0.25em;
@@ -73,6 +73,7 @@ input {
   margin-bottom: 0.6rem;
   gap: 2rem;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .list {
