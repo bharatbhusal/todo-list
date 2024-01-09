@@ -38,7 +38,15 @@
 .btn:hover {
   background-color: hsl(200, 100%, 30%);
 }
-
+.btn-category-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  /* width: 14rem; */
+  min-width: 6rem;
+  overflow: hidden;
+}
 .btn-danger:hover {
   background-color: hsl(0, 100%, 40%, 0.2);
 }
@@ -51,10 +59,11 @@
   background-color: hsl(0, 100%, 40%);
   font-size: 12px;
   width: 15px;
-  height: 15px;
   padding: 0;
-  border-radius: 5rem;
+  border-radius: 0.5rem 1rem 1rem 1rem;
   border: none;
+  overflow: visible;
+  transform: translate(1px, 15px);
 }
 
 .btn-add {
@@ -169,8 +178,20 @@ li.completed {
   .container {
     width: 40rem;
   }
+  .btn-delete-category-mini {
+    visibility: visible;
+  }
+  .btn-delete-category {
+    visibility: hidden;
+  }
 }
 
 /* Media queries for small-sized devices */
 @media screen and (max-width: 600px) {
+  .btn-delete-category-mini {
+    visibility: hidden;
+  }
+  .btn-category {
+    visibility: visible;
+  }
 }

@@ -15,9 +15,13 @@ export default function TodoList({ todos, setTodos, categories, setCategories })
     }
     const Category = ({ each }) => {
         return (
-            <button className={`btn btn-category ${toList.category === each.category ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each !== "All" ? each.category : "All"}
+            <div className="btn-category-box ">
                 {each !== "All" && <button className="btn-delete-category-mini" onClick={() => deleteCategory(each.id)}>X</button>}
-            </button>
+
+                <button className={`btn btn-category ${toList.category === each.category ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each !== "All" ? each.category : "All"}
+                </button>
+
+            </div>
         )
     }
 
