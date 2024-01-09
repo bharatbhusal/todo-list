@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
-import DeleteTodoItem from "./DeleteTodoItem";
+import DeleteCategoryItem from "./DeleteCategoryItem";
 
 // Functional component for rendering a list of todo items
 export default function TodoList({ todos, setTodos, categories, setCategories }) {
     const [toList, setToList] = useState('')
     const [count, setCount] = useState(0)
-
+    // Function to delete a todo
+    function deleteCategory(id) {
+        console.log("delete called");
+        setCategories(currentCategory => {
+            return currentCategory.filter(category => category.id !== id);
+        });
+    }
     const Category = ({ each }) => {
         return (
-            <button className={`btn btn-category ${toList.category === each.category ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each !== "All" ? each.category : "All"}</button>
+            <button className={`btn btn-category ${toList.category === each.category ? "active" : "btn-category"}`} onClick={() => setToList(each)}>{each !== "All" ? each.category : "All"}
+                {each !== "All" && <button className="btn-delete-category-mini" onClick={() => deleteCategory(each.id)}>X</button>}
+            </button>
         )
     }
 
@@ -53,7 +61,7 @@ export default function TodoList({ todos, setTodos, categories, setCategories })
             {/* Display the total number of todos if there are todos */}
             {<h4>{toList.category} Todos: {!toList.category ? todos.length : count}</h4>}
 
-            {categories.length !== 0 && toList.category && <DeleteTodoItem  {...toList} key={toList.id} setCategories={setCategories} />}
+            {categories.length !== 0 && toList.category && <DeleteCategoryItem  {...toList} key={toList.id} setCategories={setCategories} />}
 
         </div >
     );

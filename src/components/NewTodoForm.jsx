@@ -7,6 +7,7 @@ export function NewTodoForm({ addTodo, categories }) {
     const [itemCategory, setItemCategory] = useState('');
 
     const Category = ({ each }) => {
+
         return (
             <button className={`btn btn-category ${itemCategory === each ? "active" : "btn-category"}`} type="button" onClick={() => setItemCategory(each)}>{each}</button>)
     }

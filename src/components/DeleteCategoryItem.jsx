@@ -1,5 +1,5 @@
 // Functional component for rendering an individual todo item
-export default function DeleteTodoItem({ id, category, setCategories }) {
+export default function DeleteCategoryItem({ id, category, setCategories }) {
     // Function to delete a todo
     function deleteCategory(id) {
         console.log("delete called");

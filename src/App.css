@@ -46,6 +46,17 @@
 .btn-delete-category {
   width: 100%;
 }
+
+.btn-delete-category-mini {
+  background-color: hsl(0, 100%, 40%);
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border-radius: 5rem;
+  border: none;
+}
+
 .btn-add {
   height: 3rem;
   font-size: larger;
@@ -158,4 +169,8 @@ li.completed {
   .container {
     width: 40rem;
   }
+}
+
+/* Media queries for small-sized devices */
+@media screen and (max-width: 600px) {
 }
