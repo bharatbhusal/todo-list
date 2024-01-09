@@ -152,3 +152,10 @@ li.completed {
   width: 100%;
   height: 2rem;
 }
+
+/* Media queries for medium-sized devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 40rem;
+  }
+}

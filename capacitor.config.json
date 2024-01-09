@@ -1,0 +1,7 @@
+{
+    "appId": "io.ionic.todoList",
+    "appName": "todoList",
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+}

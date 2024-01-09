@@ -10,6 +10,9 @@
 
 # production
 /build
+/android
+/ios
+
 
 # misc
 .DS_Store
@@ -19,3 +22,4 @@
 .env.production.local
 
 npm-debug.log*
+
