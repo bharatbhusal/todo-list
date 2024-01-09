@@ -1,8 +1,18 @@
+/* Root level CSS variables for easy theming */
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-text: rgb(204, 238, 255);
+  --color-hover: hsl(200, 100%, 30%);
+}
+
 body {
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  background: #333;
-  color: rgb(204, 238, 255);
+  background: var(--color-bg);
+  color: var(--color-text);
   /* width: 400px; */
   /* margin: 3rem auto; */
   display: flex;
